@@ -27,12 +27,17 @@ import { LivresCardComponent } from './view/components/Livres/livres-card/livres
 import { LivresDetailsComponent } from './view/components/Livres/livres-details/livres-details.component';
 import { LivresAddComponent } from './view/components/Livres/livres-add/livres-add.component';
 import { HandleUsersComponent } from './view/pages/manage-user/handle-users/handle-users.component';
-import { UsersDetailsComponent } from './view/pages/users-details/users-details.component';
 import { UserLibraryComponent } from './view/users-pages/user-library/user-library.component';
 import { UserDetailsLivresComponent } from './view/users-pages/user-details-livres/user-details-livres.component';
 import { MesLivresComponent } from './view/users-pages/mes-livres/mes-livres.component';
 import { MesLivresComponentComponent } from './view/components/Livres-users/mes-livres-component/mes-livres-component.component';
 import { MesLivresCardComponent } from './view/components/Livres-users/mes-livres-card/mes-livres-card.component';
+import { AdminInfoComponent } from './view/components/admin-info/admin-info.component';
+import { AdminNavBarComponent } from './view/pages/admin-nav-bar/admin-nav-bar.component';
+import { UserNavBarComponent } from './view/users-pages/user-nav-bar/user-nav-bar.component';
+import { AdminProfileComponent } from './view/pages/admin-profile/admin-profile.component';
+import { UserProfileComponent } from './view/users-pages/user-profile/user-profile.component';
+import { ModifierUtilisateurComponent } from './view/components/modifier-utilisateur/modifier-utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -56,13 +61,18 @@ import { MesLivresCardComponent } from './view/components/Livres-users/mes-livre
     LivresDetailsComponent,
     LivresAddComponent,
     HandleUsersComponent,
-    UsersDetailsComponent,
     UserLibraryComponent,
     UserDetailsLivresComponent,
     MesLivresComponent,
     MesLivresComponentComponent,
     MesLivresCardComponent,
-    routingComponents
+    routingComponents,
+    AdminInfoComponent,
+    AdminNavBarComponent,
+    UserNavBarComponent,
+    AdminProfileComponent,
+    UserProfileComponent,
+    ModifierUtilisateurComponent,
   ],
   imports: [
     BrowserModule,

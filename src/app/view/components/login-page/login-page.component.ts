@@ -20,13 +20,13 @@ export class LoginPageComponent implements OnInit {
     // this._httpClient.post(this.url,"Authorization", encodedData);
 
     this.loginForm = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(4)]],
-      password: ['', [Validators.required, Validators.minLength(4)]],
+      username: ['', [Validators.required]],
+      password: ['', Validators.required],
     });
 
     // this.loginForm = new FormGroup({
-    //   'username' : new FormControl(null, Validators.required),
-    //   'password' : new FormControl(null, Validators.required)
+    //   'username' : new FormControl(null, [Validators.required, Validators.minLength(4)]),
+    //   'password' : new FormControl(null, [Validators.required, Validators.minLength(4)])
     // })
   }
 

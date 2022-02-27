@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<app-admin-nav-bar></app-admin-nav-bar>
 <div class="">
     <div class="row row-cols-md-3 ">
         <!-- email input -->
@@ -19,8 +19,16 @@
                             </div> 
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn mt-2 shadow ms-3 bold btn-primary" type="button">AJOUTER UN UTILISATEUR</button>
-                            <button class="btn mt-2 mb-4 ms-3 bold shadow btn-primary" type="button">AJOUTER UN LIVRE</button>
+                            <button class="btn mt-2 shadow ms-3 bold btn-primary" type="button" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">AJOUTER UN UTILISATEUR</button>
+                            <div class="modal fade " id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                                <app-popup-contains></app-popup-contains>
+                            </div>
+
+                            <button class="btn mt-2 mb-4 ms-3 bold shadow btn-primary" type="button" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">AJOUTER UN LIVRE</button>
+                            <div class="modal fade " id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+                                <app-livres-add></app-livres-add>
+                            </div>
+
                         </div>
                     </div>    
                 </div>
