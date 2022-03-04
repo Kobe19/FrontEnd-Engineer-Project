@@ -38,6 +38,11 @@ import { UserNavBarComponent } from './view/users-pages/user-nav-bar/user-nav-ba
 import { AdminProfileComponent } from './view/pages/admin-profile/admin-profile.component';
 import { UserProfileComponent } from './view/users-pages/user-profile/user-profile.component';
 import { ModifierUtilisateurComponent } from './view/components/modifier-utilisateur/modifier-utilisateur.component';
+import { DashboardComponentComponent } from './view/admin/dashboard-component/dashboard-component.component';
+import { TableauModule } from 'ngx-tableau';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { AjoutBibliothequeComponent } from './view/pages/ajout-bibliotheque/ajout-bibliotheque.component';
+import { ApercuBiblioComponent } from './view/pages/manage-books/apercu-biblio/apercu-biblio.component';
 
 @NgModule({
   declarations: [
@@ -73,13 +78,18 @@ import { ModifierUtilisateurComponent } from './view/components/modifier-utilisa
     AdminProfileComponent,
     UserProfileComponent,
     ModifierUtilisateurComponent,
+    DashboardComponentComponent,
+    AjoutBibliothequeComponent,
+    ApercuBiblioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TableauModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent],
