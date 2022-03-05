@@ -43,8 +43,13 @@ export class SignInPageComponent implements OnInit {
     console.log('Submit', this.SignupForm.value);
 
     this.SignupForm = this.fb.group({
-      username: [''],
+      name: [''],
+      surname: [''],
+      email: [''],
+      phone: [''],
+      adress: [''],
       password: [''],
+      profileImage: ['']
     });     
 }
 }
