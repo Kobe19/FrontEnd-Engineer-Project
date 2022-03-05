@@ -22,12 +22,13 @@ export class LivresAddComponent implements OnInit {
 
     this.addlivresForm = this.fb.group({
       name: ['', [Validators.required]],
-      surname: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
-      adress: ['', [Validators.required]],
-      password: ['', Validators.required],
-      profileImage: ['']
+      isbn: ['', Validators.required],
+      year: ['', [Validators.required]],
+      genre: ['', Validators.required],
+      auteur: ['', [Validators.required]],
+      description: ['', Validators.required],
+      ajout: ['', Validators.required],
+      publication: ['', Validators.required]
 
     });
   }
@@ -42,10 +43,16 @@ export class LivresAddComponent implements OnInit {
     }
     console.log('Submit', this.addlivresForm.value);
 
+    //clear the form after validating it
     this.addlivresForm = this.fb.group({
-      username: [''],
-      password: [''],
+      name: [''],
+      isbn: [''],
+      year: [''],
+      genre: [''],
+      auteur: [''],
+      description: [''],
+      ajout: [''],
+      publication: ['']
     });     
 }
-
 }

@@ -27,7 +27,8 @@ export class AddBookUsersComponent implements OnInit {
       genre: ['', Validators.required],
       auteur: ['', [Validators.required]],
       description: ['', Validators.required],
-      ajout: ['', Validators.required]
+      ajout: ['', Validators.required],
+      publication: ['', Validators.required]
 
     });
   }
@@ -50,7 +51,8 @@ export class AddBookUsersComponent implements OnInit {
       genre: [''],
       auteur: [''],
       description: [''],
-      ajout: ['']
+      ajout: [''],
+      publication: ['']
     });     
 }
 
