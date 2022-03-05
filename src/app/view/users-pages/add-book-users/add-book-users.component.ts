@@ -23,12 +23,11 @@ export class AddBookUsersComponent implements OnInit {
     this.addlivresUsersForm = this.fb.group({
       name: ['', [Validators.required]],
       isbn: ['', Validators.required],
-      year: ['', [Validators.required, Validators.email]],
-      date: ['', Validators.required],
+      year: ['', [Validators.required]],
       genre: ['', Validators.required],
       auteur: ['', [Validators.required]],
       Description: ['', Validators.required],
-      profileImage: ['']
+      ajout: ['', Validators.required]
 
     });
   }
@@ -43,9 +42,15 @@ export class AddBookUsersComponent implements OnInit {
     }
     console.log('Submit', this.addlivresUsersForm.value);
 
+    //clear the form after validating it
     this.addlivresUsersForm = this.fb.group({
-      username: [''],
-      password: [''],
+      name: [''],
+      isbn: [''],
+      year: [''],
+      genre: [''],
+      auteur: [''],
+      Description: [''],
+      ajout: ['']
     });     
 }
 
