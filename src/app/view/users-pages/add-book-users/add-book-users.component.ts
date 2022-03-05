@@ -26,7 +26,7 @@ export class AddBookUsersComponent implements OnInit {
       year: ['', [Validators.required]],
       genre: ['', Validators.required],
       auteur: ['', [Validators.required]],
-      Description: ['', Validators.required],
+      description: ['', Validators.required],
       ajout: ['', Validators.required]
 
     });
@@ -49,7 +49,7 @@ export class AddBookUsersComponent implements OnInit {
       year: [''],
       genre: [''],
       auteur: [''],
-      Description: [''],
+      description: [''],
       ajout: ['']
     });     
 }
