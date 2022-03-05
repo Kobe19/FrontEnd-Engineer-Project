@@ -41,7 +41,11 @@ export class LoginPageComponent implements OnInit {
             return;
           }
           console.log('Submit', this.loginForm.value);
-        
+
+          this.loginForm = this.fb.group({
+            username: [''],
+            password: [''],
+          });     
   }
 
 }

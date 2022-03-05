@@ -12,6 +12,7 @@ import { HandleBookComponent } from './view/pages/manage-books/handle-book/handl
 import { LibraryComponent } from './view/pages/manage-books/library/library.component';
 import { HandleUsersComponent } from './view/pages/manage-user/handle-users/handle-users.component';
 import { SignInPageComponent } from './view/pages/sign-in-page/sign-in-page.component';
+import { AddBookUsersComponent } from './view/users-pages/add-book-users/add-book-users.component';
 import { MesLivresComponent } from './view/users-pages/mes-livres/mes-livres.component';
 import { UserDetailsLivresComponent } from './view/users-pages/user-details-livres/user-details-livres.component';
 import { UserLibraryComponent } from './view/users-pages/user-library/user-library.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path: 'library', component: UserLibraryComponent},
   {path: 'my-books', component: MesLivresComponent},
   {path: 'books-details', component: UserDetailsLivresComponent},
+  {path: 'add-book', component: AddBookUsersComponent},
 
   // les routes pour le super admin
 
@@ -69,5 +71,6 @@ export const routingComponents = [
   SignInPageComponent, 
   HandleUsersComponent,
   DashboardComponentComponent,
-  AjoutBibliothequeComponent
+  AjoutBibliothequeComponent,
+  AddBookUsersComponent
 ]
