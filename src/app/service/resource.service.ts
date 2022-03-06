@@ -8,7 +8,7 @@ import {AuthService} from "./auth.service";
 })
 export class ResourceService {
 
-  readonly baseUrl = "http://localhost:8080";
+  readonly baseUrl = "http://localhost:4200/api";
   constructor(private  httpClient:HttpClient,private authService:AuthService) { }
 
   public getBookById(id:string):Observable<any> {

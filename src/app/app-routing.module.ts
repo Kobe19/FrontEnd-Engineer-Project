@@ -32,7 +32,6 @@ const routes: Routes = [
   {path: 'inscription', component: SignInPageComponent},
   {path: 'admin-profile', component: AdminProfileComponent},
   {path: 'preview-library', component: LibraryComponent},
-
   // les routes pour les utilisateurs :
 
   {path: 'user-profile', component: UserProfileComponent},
@@ -60,15 +59,15 @@ export class AppRoutingModule { }
 export const routingComponents = [
   UserProfileComponent,
   AdminProfileComponent,
-  LoginPageComponent, 
-  AdminInfoComponent, 
-  MesLivresComponent, 
-  UserCardComponent, 
-  HomePageComponent, 
-  HandleBookComponent, 
-  DescriptionBooksComponent, 
-  LibraryComponent, 
-  SignInPageComponent, 
+  LoginPageComponent,
+  AdminInfoComponent,
+  MesLivresComponent,
+  UserCardComponent,
+  HomePageComponent,
+  HandleBookComponent,
+  DescriptionBooksComponent,
+  LibraryComponent,
+  SignInPageComponent,
   HandleUsersComponent,
   DashboardComponentComponent,
   AjoutBibliothequeComponent,
