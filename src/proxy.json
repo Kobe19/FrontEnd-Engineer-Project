@@ -4,5 +4,11 @@
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
+  },
+  "/books/*": {
+    "target": "https://my-demo-bucket-123432134.s3.eu-central-1.amazonaws.com/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
   }
 }

@@ -49,7 +49,6 @@ export class AddBookUsersComponent implements OnInit {
     if (this.addlivresUsersForm.invalid) {
       return;
     }
-    console.log('Submit', this.addlivresUsersForm.value);
     const formdata = new FormData();
     formdata.append("name",this.addlivresUsersForm.get("name")?.value)
     formdata.append("isbn",this.addlivresUsersForm.get("isbn")?.value)
@@ -61,7 +60,10 @@ export class AddBookUsersComponent implements OnInit {
     formdata.append("publication",this.addlivresUsersForm.get("publication")?.value)
 
     this.bookService.upload(formdata).subscribe(response =>{
-      if (response) console.log(response)
+      console.log(response)
+      if (response) {
+        window.alert("upload success")
+      }
     })
     //clear the form after validating it
     // this.addlivresUsersForm = this.fb.group({

@@ -28,6 +28,7 @@
     "ngx-pagination": "^5.1.1",
     "ngx-tableau": "^1.2.0",
     "npm": "^8.5.0",
+    "pspdfkit": "^2022.1.2",
     "popper.js": "^1.16.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
