@@ -44,6 +44,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AjoutBibliothequeComponent } from './view/pages/ajout-bibliotheque/ajout-bibliotheque.component';
 import { ApercuBiblioComponent } from './view/pages/manage-books/apercu-biblio/apercu-biblio.component';
 import { AddBookUsersComponent } from './view/users-pages/add-book-users/add-book-users.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { AddBookUsersComponent } from './view/users-pages/add-book-users/add-boo
     HttpClientModule,
     ReactiveFormsModule,
     TableauModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

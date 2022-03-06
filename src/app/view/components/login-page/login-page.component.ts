@@ -33,7 +33,6 @@ export class LoginPageComponent implements OnInit {
 
 
   submitForm(){
-
           // Set flag to true
           this.isFormSubmitted = true;
 

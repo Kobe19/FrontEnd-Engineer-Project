@@ -21,7 +21,7 @@ import { UserProfileComponent } from './view/users-pages/user-profile/user-profi
 const routes: Routes = [
 
   //les routes pour l'admin
-
+  { path: '', component: LoginPageComponent },
   {path: 'login', component: LoginPageComponent},
   {path: 'home', component: HomePageComponent},
   {path: 'manage-library', component: HandleBookComponent},
