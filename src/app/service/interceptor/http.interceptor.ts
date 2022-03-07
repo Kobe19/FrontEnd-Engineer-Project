@@ -13,10 +13,9 @@ export class HttpInterceptor implements HttpInterceptor {
   constructor(private authService:AuthService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    request.headers.append("Authorization",`Basic username=${this.authService.getUser().username} password=${this.authService.getUser().password}`)
+    const token = btoa(this.authService.getUser().username + ":" + this.authService.getUser().password)
+    request.headers.append("Authorization",`Basic ` + token)
     return next.handle(request);
   }
-
-
 
 }
