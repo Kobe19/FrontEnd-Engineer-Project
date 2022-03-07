@@ -43,8 +43,8 @@ import { TableauModule } from 'ngx-tableau';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AjoutBibliothequeComponent } from './view/pages/ajout-bibliotheque/ajout-bibliotheque.component';
 import { ApercuBiblioComponent } from './view/pages/manage-books/apercu-biblio/apercu-biblio.component';
-import { AddBookUsersComponent } from './view/users-pages/add-book-users/add-book-users.component';
 import {PdfReaderComponent} from "./view/components/pdf-reader/pdf-reader.component";
+import { AddBookUsersComponent } from './view/users-pages/add-book-users/add-book-users.component';
 
 @NgModule({
   declarations: [

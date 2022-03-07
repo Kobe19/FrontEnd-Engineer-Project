@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {BookService} from "../../../service/book.service";
+import {BookService} from "../../../service/book/book.service";
 import format from "@popperjs/core/lib/utils/format";
 
 @Component({
@@ -15,7 +15,7 @@ export class AddBookUsersComponent implements OnInit {
   //encodedData = "Basic " + btoa(username:password)
   isFormSubmitted = false;
 
-  constructor(private fb: FormBuilder, private _httpClient: HttpClient,private bookService:BookService) { }
+  constructor(private fb: FormBuilder, private _httpClient: HttpClient, private bookService:BookService) { }
 
   ngOnInit() {
 

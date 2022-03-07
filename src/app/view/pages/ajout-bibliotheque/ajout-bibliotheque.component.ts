@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {createLibraryService} from "../../../service/createLibrary/createLibrary.service";
 
 @Component({
   selector: 'app-ajout-bibliotheque',
@@ -13,7 +14,7 @@ export class AjoutBibliothequeComponent implements OnInit {
   //encodedData = "Basic " + btoa(username:password)
   isFormSubmitted = false;
 
-  constructor(private fb: FormBuilder, private _httpClient: HttpClient) { }
+  constructor(private fb: FormBuilder, private _httpClient: HttpClient, private createLibraryService:createLibraryService) { }
 
   ngOnInit(): void {
 
@@ -32,12 +33,17 @@ export class AjoutBibliothequeComponent implements OnInit {
     if (this.LibraryForm.invalid) {
       return;
     }
-    console.log('Submit', this.LibraryForm.value);
+    const formdata = new FormData();
+    formdata.append("libraryname",this.LibraryForm.get("libraryname")?.value)
+    formdata.append("librarylogo",this.LibraryForm.get("librarylogo")?.value)
 
-    this.LibraryForm = this.fb.group({
-      libraryname: [''],
-      librarylogo: [''],
-    });     
+    this.createLibraryService.upload(formdata).subscribe(response =>{
+      console.log(response)
+      if (response) {
+        window.alert("upload success")
+      }
+    })
+    
 }
 
 }

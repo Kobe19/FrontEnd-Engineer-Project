@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { adminRegisterService } from 'src/app/service/adminRegister/adminRegister.service';
 
 @Component({
   selector: 'app-sign-in-page',
@@ -15,7 +16,7 @@ export class SignInPageComponent implements OnInit {
 
   
 
-  constructor(private fb: FormBuilder, private _httpClient: HttpClient) { }
+  constructor(private fb: FormBuilder, private _httpClient: HttpClient, private adminRegisterService:adminRegisterService) { }
 
   ngOnInit() {
     // this._httpClient.post(this.url,"Authorization", encodedData);
@@ -40,16 +41,20 @@ export class SignInPageComponent implements OnInit {
     if (this.SignupForm.invalid) {
       return;
     }
-    console.log('Submit', this.SignupForm.value);
+    const formdata = new FormData();
+    formdata.append("name",this.SignupForm.get("name")?.value)
+    formdata.append("surname",this.SignupForm.get("surname")?.value)
+    formdata.append("email",this.SignupForm.get("email")?.value)
+    formdata.append("phone",this.SignupForm.get("phone")?.value)
+    formdata.append("adress",this.SignupForm.get("adress")?.value)
+    formdata.append("password",this.SignupForm.get("password")?.value)
+    formdata.append("profileImage",this.SignupForm.get("profileImage")?.value);
 
-    this.SignupForm = this.fb.group({
-      name: [''],
-      surname: [''],
-      email: [''],
-      phone: [''],
-      adress: [''],
-      password: [''],
-      profileImage: ['']
+    this.adminRegisterService.upload(formdata).subscribe(response =>{
+      console.log(response)
+      if (response) {
+        window.alert("upload success")
+      }
     });     
 }
 }

@@ -100,6 +100,16 @@
                 <div *ngIf="addlivresForm.get('ajout')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">livre est requis</div>
             </div>
 
+            <div class="mb-3 ms-3 me-3">
+                <label for="formFile" class="mt-2 label_position mb-1 ms-1 text-muted">Ajouter une image</label>
+                <input class="shadow form-control" id="formFile" type="file" formControlName="imagebook" (change)="onFileChange($event)"
+                [ngClass]="{ 'is-invalid': (isFormSubmitted && addlivresForm.get('imagebook')?.errors) || (!addlivresForm.get('imagebook')?.pristine && addlivresForm.get('imagebook')?.invalid)}">
+            </div>
+            <div style="margin-top: -0.7em; margin-left: -0.2em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                *ngIf="(isFormSubmitted && addlivresForm.get('imagebook')?.errors) || (!addlivresForm.get('imagebook')?.pristine && addlivresForm.get('imagebook')?.invalid)">
+                <div *ngIf="addlivresForm.get('imagebook')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">livre est requis</div>
+            </div>
+
             <div class="mt-4 mb-4">
                 <button type="submit" class="btn btn-primary me-4 btn-sm float-end mb-3">Valider</button>
                 <button type="button" class="btn btn-danger btn-sm float-end me-3" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Annuler</button>
