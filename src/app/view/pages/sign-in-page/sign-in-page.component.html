@@ -1,141 +1,178 @@
+<section class="">
+    <div class="row ms-2 me-2"> 
+        <div class="col ms-5">
 
-    <section class="">
-        <div class="row"> 
-            <div class="col">
-
-                <!-- emoji lecteur avec son texte de description - début -->
-                <div class="row row-style">
-                    <div class="col">
-                       <div class="img_descipt_left"><img src="assets/signup_pic/reading.png" width="200em" alt="logo here"/></div>
-                    </div>
-                    <div class="col">
-                        <div class="txt_descript_img1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula </div>
-                    </div> 
+            <!-- emoji lecteur avec son texte de description - début -->
+            <div class="row mt-2">
+                <div class="col mt-5">
+                   <div class=""><img src="assets/signup_pic/reading.png" width="200em" alt="logo here"/></div>
                 </div>
-                <!-- emoji lecteur avec son texte de description - fin -->
-
-                <!-- emoji monde avec son texte de description - debut -->
-                <div class="row row-style">
-                    <div class="col">
-                       <div class="img_descipt_left"><img src="assets/signup_pic/world.webp" width="200em" alt="logo here"/></div>
-                    </div>
-                    <div class="col">
-                        <div class="txt_descript_img">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula </div>
-                    </div> 
-                </div>
-                <!-- emoji monde avec son texte de description - fin -->
-
-                <!-- emoji horloge avec son texte de description - debut -->
-                <div class="row row-style">
-                    <div class="col">
-                       <div class="img_descipt_horloge"><img src="assets/signup_pic/horloge.png" width="300em" alt="logo here"/></div>
-                    </div>
-                    <div class="col">
-                        <div class="txt_descript_img">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula </div>
-                    </div> 
-                </div>
-                <!-- emoji horloge avec son texte de description - fin -->
-
+                <div class="col mt-5">
+                    <div class="mt-5 me-4 "><h3 class="me-4">Read anywhere</h3>A solution to read your favorite book where and when ever you want. </div>
+                </div> 
             </div>
+            <!-- emoji lecteur avec son texte de description - fin -->
 
-            <div class="col">
-                
-                <div class="shadow card shadow-1-strong connexion_card ">
-                    <div class="card-body p-5 text-center d-grid gap-4">
-                        <!-- logo -->
-                        <div class="main-logo-style"><img src="assets/image.jpg" width="300em" alt="logo here"/></div>
-                        
-                        <!-- title box -->
-                        <h3 class="mb-3">Join us | Create your account</h3>
-                        
-                        
-                        <div class="row">
-                            <!-- email input -->
-                            <div class="col">
-                                <div class="form-group">
-                                    <label class="label_position">Email address</label>
-                                    <div class="input-group flex-nowrap">     
-                                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
+            <!-- emoji monde avec son texte de description - debut -->
+            <div class="row mt-5 mb-5 row-style">
+                <div class="col mt-5">
+                   <div class=""><img src="assets/signup_pic/world.webp" width="200em" alt="logo here"/></div>
+                </div>
+                <div class="col mt-5">
+                    <div class="mt-4"><h3 class="me-4">Read at anytime</h3>With e-lib read at anytime you favorite book and share with you friends </div>
+                </div> 
+            </div>
+            <!-- emoji monde avec son texte de description - fin -->
+
+            <!-- emoji horloge avec son texte de description - debut -->
+            <div class="row mt-5 mb-5 row-style">
+                <div class="col mt-5">
+                   <div class="ms-4 "><img src="assets/signup_pic/horloge2.png" width="160em" alt="logo here"/></div>
+                </div>
+                <div class="col mt-5">
+                    <div class="mt-5"><h3 class="me-4">Everywhere you go</h3>Bring your books with you. accessible with any device in whole world </div>
+                </div> 
+            </div>
+            <!-- emoji horloge avec son texte de description - fin -->
+
+        </div>
+
+        <div class="col ">
+            
+            <div class="shadow card shadow-1-strong connexion_card text-center mt-4 ms-5 me-3">
+                <div class="card-body p-5  d-grid gap-4">
+                    <!-- logo -->
+                    <div class=""><img src="assets/image.jpg" width="300em" alt="logo here"/></div>
+                    
+                    <!-- title box -->
+                    <h3 class="mb-3">Join us | Create your account</h3>
+                    
+                <form [formGroup]="SignupForm" (ngSubmit)="submitForm()"> 
+
+                    <div class="row">
+                        <!-- email input -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="float-start">Name</label>
+                                <div class="input-group flex-nowrap">     
+                                    <input type="text" class="shadow form-control" formControlName="name" style="height: 2.8em;" placeholder="Name" aria-label="Username" aria-describedby="addon-wrapping"
+                                    [ngClass]="{ 'is-invalid': (isFormSubmitted && SignupForm.get('name')?.errors) || (!SignupForm.get('name')?.pristine && SignupForm.get('name')?.invalid)}">
                                 </div>
                             </div>
-
-                            <!-- email input -->
-                            <div class="col">
-                                <div class="form-group">
-                                    <label class="label_position">Email address</label>
-                                    <div class="input-group flex-nowrap">     
-                                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div class="row">
-                            <!-- email input -->
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="label_position">Email address</label>
-                                    <div class="input-group flex-nowrap">     
-                                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- email input -->
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="label_position">Email address</label>
-                                    <div class="input-group flex-nowrap">     
-                                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
-                                </div>
+                            <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                                *ngIf="(isFormSubmitted && SignupForm.get('name')?.errors) || (!SignupForm.get('name')?.pristine && SignupForm.get('name')?.invalid)">
+                                <div *ngIf="SignupForm.get('name')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">Name is required</div>
                             </div>
                         </div>
-
                         
-                        <div class="row">
-                            <!-- email input -->
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="label_position">Email address</label>
-                                    <div class="input-group flex-nowrap">     
-                                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
+
+                        <!-- email input -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="float-start">Surname</label>
+                                <div class="input-group flex-nowrap">     
+                                    <input type="text" class=" shadow form-control" formControlName="surname" style="height: 2.8em;" placeholder="Surname" aria-describedby="addon-wrapping"
+                                    [ngClass]="{ 'is-invalid': (isFormSubmitted && SignupForm.get('surname')?.errors) || (!SignupForm.get('surname')?.pristine && SignupForm.get('surname')?.invalid)}">
+                                </div>
+                                </div>
+                                    <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                                    *ngIf="(isFormSubmitted && SignupForm.get('surname')?.errors) || (!SignupForm.get('surname')?.pristine && SignupForm.get('surname')?.invalid)">
+                                    <div *ngIf="SignupForm.get('surname')?.errors" style="display:inline-block; text-align:left;width:150px;">Surname is required</div>
+                                </div>
+                        </div>
+                        
+                    </div>
+
+                    
+                    <div class="row mt-3">
+                        <!-- email input -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="float-start">Email</label>
+                                <div class="input-group flex-nowrap">     
+                                    <input type="text" class="shadow form-control" formControlName="email" style="height: 2.8em;" placeholder="Email" aria-describedby="addon-wrapping"
+                                    [ngClass]="{ 'is-invalid': (isFormSubmitted && SignupForm.get('email')?.errors) || (!SignupForm.get('email')?.pristine && SignupForm.get('email')?.invalid)}">
                                 </div>
                             </div>
+                            <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                                *ngIf="(isFormSubmitted && SignupForm.get('email')?.errors) || (!SignupForm.get('email')?.pristine && SignupForm.get('email')?.invalid)">
+                                <div *ngIf="SignupForm.get('email')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">Email is required</div>
+                                <div *ngIf="SignupForm.get('email')?.errors?.['email']" style="display:inline-block; text-align:left;width:150px;">has to be an email</div>
+                            </div>
+                        </div>
+                        
 
-                            <!-- email input -->
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="label_position">Email address</label>
-                                    <div class="input-group flex-nowrap">     
-                                        <input type="text" class="shadow form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
+                        <!-- email input -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="float-start">Phone</label>
+                                <div class="input-group flex-nowrap">     
+                                    <input type="text" class="shadow form-control" formControlName="phone" style="height: 2.8em;" placeholder="Phone" aria-label="Username" aria-describedby="addon-wrapping"
+                                    [ngClass]="{ 'is-invalid': (isFormSubmitted && SignupForm.get('phone')?.errors) || (!SignupForm.get('phone')?.pristine && SignupForm.get('phone')?.invalid)}">
                                 </div>
                             </div>
-                        </div>                
-
-
-                        <!-- login button -->
-                        <div class="d-grid gap-2">
-                            <button class="shadow btn btn-style" type="submit">Sign up</button>
+                            <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                                *ngIf="(isFormSubmitted && SignupForm.get('phone')?.errors) || (!SignupForm.get('phone')?.pristine && SignupForm.get('phone')?.invalid)">
+                                <div *ngIf="SignupForm.get('phone')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">Phone is required</div>
+                            </div>
                         </div>
+                        
+                    </div>
 
-                        <!-- inscription avec Google button -->
-                        <div class="d-grid gap-2">
-                            <button class="shadow bg-light border btn btn-style" type="submit"><div class="logo-btn-style"><img src="assets/logo-google.png" width="20em" alt="logo here"/> Sign up from Google</div></button>
+                    
+                    <div class="row mt-3">
+                        <!-- email input -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="float-start">Adress</label>
+                                <div class="input-group flex-nowrap">     
+                                    <input type="text" class="shadow form-control" formControlName="adress" style="height: 2.8em;" placeholder="Adress" aria-label="Username" aria-describedby="addon-wrapping"
+                                    [ngClass]="{ 'is-invalid': (isFormSubmitted && SignupForm.get('adress')?.errors) || (!SignupForm.get('adress')?.pristine && SignupForm.get('adress')?.invalid)}">
+                                </div>
+                            </div>
+                            <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                                *ngIf="(isFormSubmitted && SignupForm.get('adress')?.errors) || (!SignupForm.get('adress')?.pristine && SignupForm.get('adress')?.invalid)">
+                                <div *ngIf="SignupForm.get('adress')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">Adress is required</div>
+                            </div>
                         </div>
+                        
 
-                        <!-- informations de redirection footer -->
-                        <div class="mb-2">
-                            <label class="label-style-foot">Vous avez déjà un compte ? <a href="">se connecter</a></label>
+                        <!-- email input -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="float-start">Password</label>
+                                <div class="input-group flex-nowrap">     
+                                    <input type="password" class="shadow form-control" formControlName="password" style="height: 2.8em;" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping"
+                                    [ngClass]="{ 'is-invalid': (isFormSubmitted && SignupForm.get('password')?.errors) || (!SignupForm.get('password')?.pristine && SignupForm.get('password')?.invalid)}">
+                                </div>
+                            </div>
+                            <div style="margin-top: -0em; margin-left: -1.3em;" class="invalid-feedback form-check d-flex justify-content-start" 
+                                *ngIf="(isFormSubmitted && SignupForm.get('password')?.errors) || (!SignupForm.get('password')?.pristine && SignupForm.get('password')?.invalid)">
+                                <div *ngIf="SignupForm.get('password')?.errors?.['required']" style="display:inline-block; text-align:left;width:150px;">Password is required</div>
+                            </div>
                         </div>
+                        
+                    </div> 
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label mt-3 label_position mb-1 ms-1 float-start">Add a profile photo</label>
+                        <input class="shadow form-control" type="file" id="formFile" formControlName="profileImage">
+                    </div>
+
+                    <!-- login button -->
+                    <div class="d-grid gap-2 mt-5">
+                        <button class="shadow btn btn-style" type="submit">Sign up</button>
+                    </div>
+
+                </form> 
+
+                    
+
+                    <!-- informations de redirection footer -->
+                    <div class="">
+                        <label class="label-style-foot">Already have an account ? <a href="/login">Connect</a></label>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    
+    </div>
+</section>

@@ -1,0 +1,59 @@
+<!-- Navbar -->
+<nav class="navbar border-bottom shadow navbar-design navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+    <!-- Container wrapper -->
+      <div class="container-fluid contain-design">
+          <!-- Toggle button -->
+          <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          >
+          <i class="fas fa-bars"></i>
+          </button>
+  
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a routerLink="/library" class="navbar-brand mt-2 mt-lg-0" href="#">
+              <img src="assets/image.jpg" width="200em" alt="logo here"/>
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link text-muted" routerLink="/library" href="#">LIBRARY</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-muted" routerLink="/my-books" href="#">MY BOOKS</a>
+              </li>
+              
+          </ul>
+          <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+  
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+              <i class="fas fa-shopping-cart"></i>
+          </a>
+  
+          <!-- Avatar -->
+          <div class="btn-group">
+              <button type="button" class="btn shadow btn-group-design btn-Light dropdown-toggle btn-lg" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/user1.png" width="27rem"> FOGUE TSAKOU DANIEL GUIROL
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                  <li><a routerLink="/user-profile" class="dropdown-item active" href="#">PROFIL</a></li>
+                  <li><a routerLink="/login" class="dropdown-item" href="#">DECONNEXION</a></li>
+              </ul>
+          </div>  
+              
+          </div>
+      </div>
+  </nav>
+  <!-- Navbar -->
